@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    position: relative;
+}
+.bg-1{
+    background-image: url(../images/منتجعات-شرم-الشيخ.jpg);
+    
+}
+.bg-2{
+    background-image: url(../images/bgg5.jpg);
+}
+.bg-1,.bg-2{
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.thr-card .card-img-overlay { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+    border-radius: 20px;
+}
+.thr-card .card{
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0);
+}
+.thr-card .card1,.thr-card .card2,.thr-card .card3 ,#places .place1{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.thr-card .card1{
+    background-image: url(../images/JACKIE\ ONASSIS\ bavkground.jpg);
+}
+.thr-card .card2{
+    background-image: url(../images/donald_trump_july_2016_getty_images_578546876.jpg);
+}
+.thr-card .card3{
+    background-image: url(../images/conrad-hilton.jpg);
+}
+.thr-card .card1:hover,.thr-card .card2:hover , .thr-card .card3:hover{
+    transform:  scale(0.9 , 0.9);
+    transition: 1s;
+}
+#places  figure{
+    overflow: hidden;
+    height: 400px;
+    width: 30%;
+}  
+.place1 .figure1 , .place3 .figure3 {
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 22% 100%);
+}
+.place2 .figure2 , .place4 .figure4 {
+    clip-path: polygon(0% 0%,
+            100% 0%,
+            90% 100%,
+            0% 100%,
+            0% 0%);
+}
+.place1:hover figure img ,.place2:hover figure img ,.place3:hover figure img,.place4:hover figure img{
+    transform:  scale(1.1, 1.1);
+    transition: 1s;
+}
+.places .card:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+.places .card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity:0.2;
+    transition: 2s;
+}
+.places .card:before{
+    position: absolute;
+    content: "";
+    width:  0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+}
+.places .card:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity:0.2;
+    transition: 2s;
+}
+.switch {
+    position: relative;
+    height: 1.5rem;
+    width: 3rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+}
+.switch:checked {
+    background-color: rgb(7, 255, 7);
+}
+.switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+}
+.switch:hover::before {
+    box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+.switch:checked:hover::before {
+    box-shadow: 0 0 0px 8px rgba(236, 72, 153, .15)
+}
+.switch:checked:before {
+    transform: translateX(100%);
+    border-color: rgb(7, 243, 78);
+}
+.share {
+    position: absolute;
+    margin-left: 88.9%;
+    width: 150px;
+    height: 150px;
+    margin-top: 200px;
+    background: rgba(10, 237, 189, 1.0);
+    background: -webkit-radial-gradient(top left, rgba(10, 237, 189, 1.0), rgba(37, 211, 103, 1.0));
+    background: -moz-radial-gradient(top left, rgba(10, 237, 189, 1.0), rgba(37, 211, 103, 1.0));
+    background: radial-gradient(to bottom right, rgba(10, 237, 189, 1.0), rgba(37, 211, 103, 1.0));
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    opacity: 0.8;
+    opacity:0.7;
+    box-shadow: 0 20px 20px rgba(0, 0, 0,0.2);
+    z-index:50;
+}
+.share a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    z-index: 1;
+}
+.share::after {
+    content: "Share";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+}
+.share:hover::after {
+    color: transparent;
+    
+}
+.share:hover {
+    opacity:1 ;
+    background: rgba(242, 41, 92, 1.0);
+    background: -webkit-radial-gradient(top left, rgba(242, 41, 92, 1.0), rgba(41, 172, 225, 1.0));
+    background: -moz-radial-gradient(top left, rgba(242, 41, 92, 1.0), rgba(41, 172, 225, 1.0));
+    background: radial-gradient(to bottom right, rgba(242, 41, 92, 1.0), rgba(41, 172, 225, 1.0));
+}
+.share a.fb {
+    background: #1266f1;
+    top: -5.65em;
+    left: -2.8em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.share a.tw {
+    background: #28abe1;
+    top: -6.55em;
+    right: -9.39em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.share a.ins {
+    background: #f2295b;
+    bottom: 6.55em;
+    left: -7.5em;
+    -webkit-tra3nsition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.share a.wh {
+    background: #25d366;
+    right: -2.81em;
+    bottom: 7.5em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.share:hover a.fb {
+    top: -1em;
+}
+.share:hover a.tw {
+    right: -2.8em;
+}
+.share:hover a.ins {
+    left: -2.8em;
+}
+.share:hover a.wh {
+    bottom: 12.2em;
+}
+.facebook {
+    padding-top: 45%;
+
+.instagram {
+    padding-left: 30%;
+    padding-top: 15%;
+}
+.whatsapp {
+    padding-left: 15%;
+    padding-top: 15%;
+}
+.twitter {
+    padding-top: 25%;
+    padding-left: 10%;
+}
+.fb:hover {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0,0.5) inset;
+}
+.tw:hover {
+    box-shadow: 10px 5px 30px 2px rgba(0, 0, 0,0.5) inset;
+}
+.ins:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0,0.5) inset;
+}
+.wh:hover {
+    box-shadow: 10px 20px 20px rgba(0, 0, 0,0.5) inset;}
+}
+@media (max-width: 767px) {
+    .share {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    
+    .share a {
+        width: 60px;
+        height: 60px;
+    }
+    
+        .share::after {
+        font-size: 20px;
+    }
+    
+    .facebook {
+        padding-top: 30%;
+    }
+    
+    .instagram {
+        padding-left: 25%;
+        padding-top: 10%;
+    }
+    
+    .whatsapp {
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+    
+    .twitter {
+        padding-top: 15%;
+        padding-left: 5%;
+    }
+}
